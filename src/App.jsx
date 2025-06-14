@@ -4,6 +4,7 @@ import Spinner from './components/Spinner';
 import Card from './components/Card';
 import { useDebounce } from 'react-use';
 import { getTrendingMovies, updateSearchCount } from './appwrite';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -81,6 +82,7 @@ const App = () => {
 
   return (
     <main>
+      <SpeedInsights />
       <div className='pattern'/>
       
       <div className="wrapper">
